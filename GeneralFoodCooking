@@ -1,0 +1,65 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Prepare Ingredients') {
+            parallel {
+                stage('Wash Vegetables') {
+                    steps {
+                        echo 'Washing vegetables'
+                        sleep 15
+                    }
+                }
+                stage('Chop Vegetables') {
+                    steps {
+                        echo 'Chopping vegetables'
+                        sleep 45
+                    }
+                }
+                stage('Marinate') {
+                    steps {
+                        echo 'Marinating Cauliflower'
+                        sleep 5
+                    }
+                }
+            }
+        }
+        
+        stage('Cooking') {
+            steps {
+                echo 'Cooking meal'
+                sleep 30
+            }
+        }
+
+        stage('Prepare Dessert') {
+            parallel {
+                stage('Mix Ingredients for Dessert') {
+                    steps {
+                        echo 'Mixing ingredients for dessert'
+                        sleep 10
+                    }
+                }
+                stage('Bake Dessert') {
+                    steps {
+                        echo 'Baking dessert'
+                        sleep 20
+                    }
+                }
+            }
+        }
+
+        stage('Serve') {
+            steps {
+                echo 'Serving the food'
+                sleep 5
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up the kitchen'
+        }
+    }
+}
