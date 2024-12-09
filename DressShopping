@@ -1,0 +1,68 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('Dress Shopping'){
+            parallel{
+                stage('Choose Top'){
+                    steps{
+                        echo "Selecting a top (Ex: Top, T-shirt, etc.)"
+                        sleep 30
+                    }
+                }
+            
+                stage(' Choose Bottom'){
+                    steps{
+                        echo "Selecting Bottom (Ex: jeans,skirt,etc)"
+                        sleep 30
+                    }
+                }
+            }
+        }
+        stage('Choose Accessories'){
+            parallel{
+                stage('Choose Earrings'){
+                    steps{
+                        echo "Selecting Earrings"
+                        sleep 15
+                    }
+                }
+                
+                stage('Choose Hairbands'){
+                    steps{
+                        echo "Selecting hairband"
+                        sleep 15
+                    }
+                }
+                
+                stage('Choose Clips'){
+                    steps{
+                        echo "Selecting Clips"
+                        sleep 15
+                    }
+                }
+            }
+        }
+        
+        stage('Checkout and Payment for Clothes'){
+            steps{
+                echo "Proceeding to checkout and making payment for clothes"
+                sleep 10
+            }
+        }
+        
+        stage ('Travel to Hotel'){
+            steps{
+                echo 'Traveling to the hotel for dinner'
+                sleep 10
+            }
+        }
+        
+        stage('At Hotel'){
+            steps{
+                echo "Having the dinner at hotel"
+                sleep 30
+            }
+        }
+    }   
+}
