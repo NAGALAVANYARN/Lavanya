@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    environment {
+        BREAD = "2 slices"
+        CHEESE = "1 slice"
+        LETTUCE = "2 leaves"
+        TOMATO = "2 slices"
+        VEGETABLES = "3 slices"
+    }
+
+    stages {
+        stage('Gather Ingredients') {
+            steps {
+                echo "Gathering ingredients: ${env.BREAD}, ${env.CHEESE}, ${env.LETTUCE}, ${env.TOMATO}, ${env.VEGETABLES}"
+                sleep 5
+            }
+        }
+
+        stage('Prepare Ingredients') {
+            steps {
+                echo "Preparing ingredients: slicing tomato, washing lettuce, and adding condiments."
+                sleep 15
+            }
+        }
+
+        stage('Assemble Sandwich') {
+            steps {
+                echo "Assembling sandwich: placing ${env.LETTUCE} on ${env.BREAD}, adding ${env.TOMATO}, ${env.VEGETABLES}, and ${env.CHEESE}."
+                sleep 5
+            }
+        }
+
+        stage('Serve') {
+            steps {
+                echo "Serving the sandwich!"
+                sleep 5
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "The sandwich preparation was successful!"
+        }
+        failure {
+            echo "Something went wrong in the sandwich preparation!"
+        }
+    }
+}
