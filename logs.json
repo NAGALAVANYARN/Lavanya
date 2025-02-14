@@ -1,1 +1,41 @@
-
+@timestamp                     | log.level            | message
+------------------------------------------------------------------------------------------
+                               |                      | 
+                               |                      | pam_unix(sshd:session): session opened for user elk(uid=1000) by (uid=0)
+                               |                      | Started Session 480 of User elk.
+                               |                      | New session 480 of user elk.
+                               |                      | Feb 14 09:30:47 elk sshd[50231]: Accepted password for elk from 192.168.1.73 port 52255 ssh2
+                               |                      | Feb 14 09:30:47 elk sshd[50231]: pam_unix(sshd:session): session opened for user elk(uid=1000) by (uid=0)
+                               |                      | Feb 14 09:30:47 elk systemd-logind[673]: New session 480 of user elk.
+2025-02-14T09:30:52.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:30:22.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:29:52.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:29:22.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:28:52.358Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:28:42.306Z       | info                 | No events received within 10m0s, restarting watch call
+                               |                      | 2025/02/14 09:28:43 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+2025-02-14T09:28:22.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:27:52.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:21:22.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:21:52.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:22:06.768Z       | info                 | File is inactive. Closing because close_inactive of 5m0s reached.
+2025-02-14T09:22:15.307Z       | info                 | Reader was closed. Closing. Path='/var/log/auth.log'
+2025-02-14T09:22:22.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:22:52.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:23:22.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:23:52.360Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:24:22.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:24:52.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:25:22.361Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:25:52.359Z       | info                 | Non-zero metrics in the last 30s
+2025-02-14T09:26:22.359Z       | info                 | Non-zero metrics in the last 30s
+                               |                      | Feb 14 09:27:02 elk sshd[50126]: pam_unix(sshd:session): session closed for user elk
+                               |                      | Feb 14 09:27:02 elk systemd-logind[673]: Session 478 logged out. Waiting for processes to exit.
+                               |                      | Feb 14 09:27:02 elk systemd-logind[673]: Removed session 478.
+2025-02-14T09:26:52.359Z       | info                 | Non-zero metrics in the last 30s
+                               |                      | pam_unix(sshd:session): session closed for user elk
+                               |                      | Session 478 logged out. Waiting for processes to exit.
+                               |                      | session-478.scope: Deactivated successfully.
+                               |                      | Removed session 478.
+2025-02-14T09:27:05.832Z       | info                 | Harvester started for paths: [/var/log/auth.log* /var/log/secure*]
+2025-02-14T09:27:22.360Z       | info                 | Non-zero metrics in the last 30s
